@@ -41,6 +41,29 @@ subpopulations including naive, effector, and cytotoxic states.
 - Annotated object saved to `data/adata_annotated.h5ad`
 - UMAP visualizations: Leiden clusters, coarse/fine cell type labels, per-cell confidence scores, dendrogram of cell type relationships
 
+### Notebook 02 — T Cell Subset Analysis
+`notebooks/02_tcell_subset_analysis.ipynb`
+
+**Subsetting & re-embedding**
+- Subset 1,041 T cells from annotated PBMC object
+- Recomputed neighbors and UMAP within T cell subset to resolve
+  finer structure
+
+**Differential expression**
+- Wilcoxon rank-sum test across six CellTypist fine-label subtypes
+- Cytotoxic markers (GNLY, GZMH, NKG7, GZMK) strongly enriched in
+  Tem/Temra and Tem/Trm cytotoxic populations
+- Naive/central memory populations show absence of strong effector
+  markers, consistent with resting transcriptional state
+
+**Gene signature scoring**
+- Scored each cell for cytotoxicity (GZMB, GZMK, PRF1, NKG7, GNLY),
+  exhaustion (PDCD1, LAG3, HAVCR2, CTLA4, TIGIT), and naive/memory
+  (CCR7, SELL, TCF7, LEF1) signatures
+- Cytotoxicity and naive scores concentrate in expected UMAP regions
+- Exhaustion signal weak and diffuse, consistent with healthy donor
+  PBMCs; exhaustion develops under chronic antigen stimulation
+
 ## Key Results
 
 ![CellTypist annotation — coarse and fine cell type labels](results/umap_celltypes.png)
@@ -55,9 +78,11 @@ Top marker genes by cluster highlight expected PBMC populations:
 
 CellTypist fine-model annotation resolved multiple T cell states; dendrogram confirms expected transcriptional relationships between immune cell populations.
 
+
+
+
 ## In Progress
 
-- **Notebook 02** — Differential expression across T cell subsets; cytotoxicity and exhaustion gene signature scoring
 - **Notebook 03** — Trajectory inference (PAGA/diffusion pseudotime) modeling naive → effector/cytotoxic differentiation
 
 ## Environment
