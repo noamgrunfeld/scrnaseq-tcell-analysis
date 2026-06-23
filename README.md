@@ -68,6 +68,10 @@ subpopulations including naive, effector, and cytotoxic states.
 
 ![CellTypist annotation — coarse and fine cell type labels](results/umap_celltypes.png)
 
+![T cell subtype UMAP](results/umap_tcell_subtypes.png)
+
+![Gene signature scores](results/umap_tcell_scores.png)
+
 Top marker genes by cluster highlight expected PBMC populations:
 - **T cells:** CCL5, B2M, HLA-B, HLA-C
 - **Monocytes (classical):** FCN1, S100A9, S100A8, TYROBP, LYZ
@@ -77,8 +81,6 @@ Top marker genes by cluster highlight expected PBMC populations:
 - **Progenitors:** SPINK2
 
 CellTypist fine-model annotation resolved multiple T cell states; dendrogram confirms expected transcriptional relationships between immune cell populations.
-
-
 
 
 ## In Progress
